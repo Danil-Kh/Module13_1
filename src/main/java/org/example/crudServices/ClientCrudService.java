@@ -1,13 +1,14 @@
-package org.example;
+package org.example.crudServices;
 
+import org.example.HibernateUtil;
+import org.example.entity.Client;
 import org.hibernate.Session;
-import org.hibernate.SessionBuilder;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class ClientCrudService {
-    private SessionFactory sessionFactory = new HibernateUtil().getSessionFactory();
 
+    private SessionFactory sessionFactory = new HibernateUtil().getSessionFactory();
     public void creatClient(Client client) {
         try(Session session = sessionFactory.openSession()) {
             Transaction tx = session.beginTransaction();

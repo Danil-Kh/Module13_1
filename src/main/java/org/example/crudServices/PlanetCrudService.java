@@ -1,5 +1,7 @@
-package org.example;
+package org.example.crudServices;
 
+import org.example.HibernateUtil;
+import org.example.entity.Planet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

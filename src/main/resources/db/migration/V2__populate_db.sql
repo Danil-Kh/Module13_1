@@ -33,7 +33,7 @@ INSERT INTO Planet (id, name) VALUES
                                   ('SEDNA1', 'Sedna'),
                                   ('TRITON1', 'Triton'),
                                   ('IO1', 'Io');
-INSERT INTO Ticket (client_id, from_planet_id, to_planet_id) VALUES
+INSERT INTO Ticket (customer_id, from_planet_id, to_planet_id) VALUES
                                                                  (1, 'EARTH1', 'MARS1'),
                                                                  (2, 'MARS1', 'VENUS1'),
                                                                  (3, 'VENUS1', 'JUPITER1'),

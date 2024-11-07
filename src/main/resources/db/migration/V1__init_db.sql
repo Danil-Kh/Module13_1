@@ -2,7 +2,7 @@
 USE SpaceTravelDB;
 
 CREATE TABLE Client(
-                       id INT AUTO_INCREMENT PRIMARY KEY,
+                       customer_id INT AUTO_INCREMENT PRIMARY KEY,
                        name VARCHAR(200),
                        check (CHAR_LENGTH(name) >= 3)
 );
@@ -14,12 +14,15 @@ CREATE TABLE Planet (
 );
 
 CREATE TABLE Ticket (
-                        id INT AUTO_INCREMENT PRIMARY KEY,
-                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                        client_id INT,
+                        ticket_id INT AUTO_INCREMENT PRIMARY KEY,
+                        created_at TIMESTAMP(0) DEFAULT CURRENT_TIMESTAMP,
+                        customer_id INT,
                         from_planet_id VARCHAR(500),
-                        to_planet_id VARCHAR(500)
-);
+                        to_planet_id VARCHAR(500),
 
+                        FOREIGN KEY (customer_id) REFERENCES Client(customer_id),
+                        FOREIGN KEY (from_planet_id) REFERENCES Planet(id),
+                        FOREIGN KEY (to_planet_id) REFERENCES Planet(id)
+);
 
 

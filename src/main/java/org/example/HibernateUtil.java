@@ -1,6 +1,9 @@
 package org.example;
 
 
+import org.example.entity.Client;
+import org.example.entity.Planet;
+import org.example.entity.Ticket;
 import org.flywaydb.core.Flyway;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,10 +15,11 @@ public class HibernateUtil {
 
     private final SessionFactory sessionFactory;
 
-    HibernateUtil() {
+    public HibernateUtil() {
         sessionFactory = new Configuration()
                 .addAnnotatedClass(Client.class)
                 .addAnnotatedClass(Planet.class)
+                .addAnnotatedClass(Ticket.class)
                 .buildSessionFactory();
     }
 

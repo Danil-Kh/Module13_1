@@ -1,4 +1,4 @@
-package org.example;
+package org.example.entity;
 
 import jakarta.persistence.*;
 
@@ -11,9 +11,11 @@ import java.util.Objects;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    @Column(name = "customer_id")
+    private int id;
+
     @Column(length = 200, nullable = false)
-    String name;
+    private String name;
 
     public void setId(int id) {
         this.id = id;

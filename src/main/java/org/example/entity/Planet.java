@@ -1,4 +1,4 @@
-package org.example;
+package org.example.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,9 +12,9 @@ import java.util.Objects;
 @Table(name = "planet")
 public class Planet {
     @Id
-    String id;
+    private String id;
     @Column(length = 500, nullable = false)
-    String name;
+    private String name;
 
     @Override
     public String toString() {
