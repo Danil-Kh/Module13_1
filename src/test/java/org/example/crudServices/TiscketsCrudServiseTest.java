@@ -1,19 +1,16 @@
 package org.example.crudServices;
 
-import org.example.PlanetNullExceptions;
+import org.example.Exceptions.PlanetNullExceptions;
 import org.example.entity.Client;
-import org.example.entity.Planet;
 import org.example.entity.Ticket;
 import org.hibernate.PropertyValueException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.opentest4j.AssertionFailedError;
 
 
 import java.sql.Timestamp;
 import java.util.Calendar;
-import java.util.Date;
 
 
 class TiscketsCrudServiseTest {
